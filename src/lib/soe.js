@@ -42,14 +42,14 @@ class Soe {
     const A = [[e1.a, e1.b], [e2.a, e2.b]];
     const b = [e1.c, e2.c];
     const solution = solve2x2(A, b);
-    const quotient = solution[2];
+    const quotient = solution[2][0];
     if (quotient === 0) {
       return false;
     }
     // add 0 to get rid of negative sign from -0
     return {
-      x: (solution[0] / quotient) + 0,
-      y: (solution[1] / quotient) + 0,
+      x: (solution[0][0] / quotient) + 0,
+      y: (solution[1][0] / quotient) + 0,
     };
   }
 }
