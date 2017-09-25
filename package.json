@@ -26,7 +26,8 @@
     "airbnb-browser-shims": "^2.0.0",
     "babel-preset-airbnb": "^2.4.0",
     "babelify": "^7.3.0",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "robust-linear-solve": "^1.0.0"
   },
   "devDependencies": {
     "budo": "^10.0.4",

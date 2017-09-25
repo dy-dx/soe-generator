@@ -3,6 +3,7 @@
   "rules": {
   },
   "env": {
+    "browser": true,
     "jasmine": {
       "globals": {
         "describe": true,
