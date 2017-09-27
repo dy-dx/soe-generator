@@ -8,26 +8,25 @@ html {
   box-sizing: inherit;
 }
 
-body {
+.generator-demo {
+  text-align: left;
+  display: inline-block;
+}
+
+.generator-demo-equations-container {
   text-align: center;
 }
 
-#container {
+.generator-demo-equations {
   text-align: left;
   display: inline-block;
 }
 
 #game {
   position: fixed;
-
-  /*
-  width: 99.5vmin;
-  top: 49.9%;
-  left: 49.9%;
-  */
   width: 133vh;
   top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  right: 0;
+  transform: translateX(0) translateY(-50%);
   background: #50514f;
 }

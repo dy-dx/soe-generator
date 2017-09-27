@@ -7,7 +7,7 @@
   "scripts": {
     "start": "rollup --watch --config rollup.config.dev.js",
     "build": "rollup --config rollup.config.prod.js",
-    "lint": "npm run eslint && npm run stylelint",
+    "lint": "npm run eslint --silent && npm run stylelint --silent",
     "eslint": "eslint . --ext js --ext jsx",
     "stylelint": "stylelint static/css/**/*.css --syntax scss",
     "test": "NODE_ENV=test mocha",
