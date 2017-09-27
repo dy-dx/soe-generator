@@ -3,24 +3,31 @@
 
 import Soe from './lib/soe';
 
-function generate() {
+function generate(type) {
   const listElem = document.getElementById('equation-list');
-  const pair = Soe.generate();
+  const pair = Soe.generateType(type);
   const { x, y } = Soe.solve(pair);
   listElem.innerText += `${pair[0].format()}\n${pair[1].format()}\n`;
   listElem.innerText += `x = ${x}\ny = ${y}\n\n`;
 }
 
-const container = document.getElementById('container');
-const button = document.createElement('input');
-button.type = 'button';
-button.id = 'generate-button';
-button.value = 'generate';
-button.onclick = generate;
-container.appendChild(button);
+function createButton(type) {
+  const container = document.getElementById('container');
+  const button = document.createElement('input');
+  container.appendChild(button);
+  button.type = 'button';
+  button.id = `generate-${type}-button`;
+  button.value = `generate ${type}`;
+  button.onclick = () => { generate(type); };
+  return button;
+}
+
+createButton('elimination');
+createButton('substitution');
+createButton('random');
 
 const list = document.createElement('pre');
 list.id = 'equation-list';
-container.appendChild(list);
+document.getElementById('container').appendChild(list);
 
-generate();
+generate('random');
