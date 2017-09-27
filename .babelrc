@@ -4,5 +4,20 @@
       "modules": false
     }]
   ],
-  "plugins": ["external-helpers"]
+  "env": {
+    "development": {
+      "plugins": ["external-helpers"]
+    },
+    "production": {
+      "plugins": ["external-helpers"]
+    },
+    "test": {
+      "presets": [
+        ["airbnb", {
+          "modules": true,
+          "targets": { "node": "current" }
+        }]
+      ]
+    }
+  }
 }
