@@ -1,0 +1,32 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.generator-demo {
+  text-align: left;
+  display: inline-block;
+}
+
+.generator-demo-equations-container {
+  text-align: center;
+}
+
+.generator-demo-equations {
+  text-align: left;
+  display: inline-block;
+}
+
+#game {
+  position: fixed;
+  width: 133vh;
+  top: 50%;
+  right: 0;
+  transform: translateX(0) translateY(-50%);
+  background: #50514f;
+}
