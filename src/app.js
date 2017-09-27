@@ -1,4 +1,6 @@
-// import 'airbnb-browser-shims';
+// #UNCOMMENTED_IN_PROD# import 'airbnb-js-shims/target/es2015';
+// #UNCOMMENTED_IN_PROD# import 'airbnb-browser-shims/browser-only';
+
 import Soe from './lib/soe';
 
 function generate() {

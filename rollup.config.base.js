@@ -8,6 +8,9 @@ module.exports = {
     file: 'static/bundle.js',
     format: 'iife',
   },
+  moduleContext: {
+    [require.resolve('whatwg-fetch')]: 'window',
+  },
   sourcemap: true,
   plugins: [
     resolve(),
