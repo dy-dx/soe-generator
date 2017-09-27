@@ -26,5 +26,21 @@ describe('Soe', () => {
       ];
       deepStrictEqual(Soe.solve(pair), { x: 3, y: 2 });
     });
+
+    it('returns false when unsolvable', () => {
+      const pair = [
+        new Equation(1, 1, 1),
+        new Equation(1, 1, 2),
+      ];
+      deepStrictEqual(Soe.solve(pair), false);
+    });
+
+    it('returns false when infinite solutions', () => {
+      const pair = [
+        new Equation(1, 1, 1),
+        new Equation(2, 2, 2),
+      ];
+      deepStrictEqual(Soe.solve(pair), false);
+    });
   });
 });
