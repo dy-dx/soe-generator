@@ -2,6 +2,7 @@
 // #UNCOMMENTED_IN_PROD# import 'airbnb-browser-shims/browser-only';
 
 import Soe from './lib/soe';
+import initGame from './lib/game';
 
 function generate(type) {
   const listElem = document.getElementById('equation-list');
@@ -31,3 +32,10 @@ list.id = 'equation-list';
 document.getElementById('container').appendChild(list);
 
 generate('random');
+
+const canvas = document.createElement('canvas');
+canvas.id = 'game';
+canvas.height = 999;
+canvas.width = 999;
+document.body.appendChild(canvas);
+initGame(canvas);

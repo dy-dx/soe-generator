@@ -1958,6 +1958,10 @@ known-css-properties@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/known-css-properties/-/known-css-properties-0.3.0.tgz#a3d135bbfc60ee8c6eacf2f7e7e6f2d4755e49a4"
 
+kontra@straker/kontra#3.0.0:
+  version "3.0.0"
+  resolved "https://codeload.github.com/straker/kontra/tar.gz/cf05760c949c67322791d7dc4c408c4adab5d9f3"
+
 levn@^0.3.0, levn@~0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/levn/-/levn-0.3.0.tgz#3b09924edf9f083c0490fdd4c0bc4421e04764ee"
