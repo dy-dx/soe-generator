@@ -57,8 +57,8 @@ class Soe {
     const x = this.generateAnswer();
     const y = this.generateAnswer();
 
-    const c1 = (a1 * x) + (b1 * y);
-    const c2 = (a2 * x) + (b2 * y);
+    const c1 = a1 * x + b1 * y;
+    const c2 = a2 * x + b2 * y;
 
     const equation1 = new Equation(a1, b1, c1);
     const equation2 = new Equation(a2, b2, c2);
@@ -74,7 +74,11 @@ class Soe {
       random: this.generateRandom,
       substitution: this.generateSubstitution,
       elimination: this.generateElimination,
-    }[type] || (() => { throw new Error('soe type not found'); })).apply(this);
+    }[type] ||
+      (() => {
+        throw new Error('soe type not found');
+      })
+    ).apply(this);
   }
 
   static solve([e1, e2]) {
@@ -87,8 +91,8 @@ class Soe {
     }
     // add 0 to get rid of negative sign from -0
     return {
-      x: (solution[0][0] / quotient) + 0,
-      y: (solution[1][0] / quotient) + 0,
+      x: solution[0][0] / quotient + 0,
+      y: solution[1][0] / quotient + 0,
     };
   }
 }

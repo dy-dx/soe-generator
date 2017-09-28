@@ -37,7 +37,9 @@ class GeneratorDemo {
     button.type = 'button';
     button.className = `generate-equation-button generate-equation-button-${type}`;
     button.value = type;
-    button.onclick = () => { this.generate(type); };
+    button.onclick = () => {
+      this.generate(type);
+    };
     return button;
   }
 

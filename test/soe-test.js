@@ -29,16 +29,16 @@ describe('Soe', () => {
 
     it('returns false when unsolvable', () => {
       const pair = [
-        new Equation(1, 1, 1),
-        new Equation(1, 1, 2),
+        new Equation(1, 1, 1), // x + y = 1
+        new Equation(1, 1, 2), // x + y = 2
       ];
       deepStrictEqual(Soe.solve(pair), false);
     });
 
     it('returns false when infinite solutions', () => {
       const pair = [
-        new Equation(1, 1, 1),
-        new Equation(2, 2, 2),
+        new Equation(1, 1, 1), // x + y = 1
+        new Equation(2, 2, 2), // 2x + 2y = 2
       ];
       deepStrictEqual(Soe.solve(pair), false);
     });
