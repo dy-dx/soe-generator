@@ -78,7 +78,7 @@ class Soe {
       (() => {
         throw new Error('soe type not found');
       })
-    ).apply(this);
+    ).call(this);
   }
 
   static solve([e1, e2]) {

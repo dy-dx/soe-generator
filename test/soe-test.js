@@ -18,6 +18,13 @@ describe('Soe', () => {
     });
   });
 
+  describe('.generateType(', () => {
+    it('calls generateRandom', () => {
+      const pair = Soe.generateType('random');
+      ok(pair && pair.length === 2);
+    });
+  });
+
   describe('.solve', () => {
     it('solves the dang thing', () => {
       const pair = [
