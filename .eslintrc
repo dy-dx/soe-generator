@@ -1,14 +1,9 @@
 {
+  "root": true,
   "extends": ["airbnb-base"],
   "rules": {
   },
   "env": {
-    "browser": true,
-    "jasmine": {
-      "globals": {
-        "describe": true,
-        "it": true
-      }
-    }
+    "browser": true
   }
 }
